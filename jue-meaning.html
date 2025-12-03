@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Jue Language: A Philosophical Design Document - Project Jue</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="config.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <div class="flex h-full grow flex-col">
+            <div class="mx-auto w-full max-w-5xl px-4 py-5 sm:px-6 lg:px-8">
+                <header
+                    class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-border-light bg-background-light/95 backdrop-blur supports-[backdrop-filter]:bg-background-light/60 dark:border-border-dark dark:bg-background-dark/95 dark:supports-[backdrop-filter]:bg-background-dark/60 px-4 py-3">
+                    <a class="flex items-center gap-3" href="index.html">
+                        <div class="w-8 h-8">
+                            <img alt="Project Jue Logo" class="w-full h-full object-contain"
+                                src="img/project-jue-large.png" />
+                        </div>
+                        <h1 class="text-xl font-bold tracking-tight text-text-light dark:text-text-dark font-display">
+                            Project-Jue</h1>
+                    </a>
+                    <nav class="hidden items-center gap-8 md:flex">
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="index.html">Home</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="vision.html">Vision &amp; Technology</a>
+                        <a class="text-sm font-medium transition-colors text-primary dark:text-primary/90"
+                            href="jue-meaning.html">Jue Meaning</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="docs.html">Docs / Guides</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="research.html">Research</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="contact.html">Contact</a>
+                    </nav>
+                    <a class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark transition-colors hover:bg-border-light dark:hover:bg-border-dark"
+                        href="#">
+                        <span aria-hidden="true" class="material-symbols-outlined !text-xl">code</span>
+                    </a>
+                    <button class="md:hidden p-2 text-text-light dark:text-text-dark">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </header>
+
+                <main class="flex flex-col gap-8 p-4 pt-12">
+                    <!-- Page Header -->
+                    <div class="flex flex-col gap-4">
+                        <h1 class="text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
+                            The Jue Language: A Philosophical Design Document
+                        </h1>
+                        <p
+                            class="max-w-3xl text-base font-normal leading-relaxed text-text-muted-light dark:text-text-muted-dark italic">
+                            A Language of Boundaries, Cycles, and Self-Reflection (Draft 1.0)
+                        </p>
+                    </div>
+
+                    <!-- Introduction -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            Introduction: Why a New Language Now
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            We stand at a threshold where code increasingly writes code, where agents reason about
+                            agents, and where large neural models serve as semi-opaque reservoirs of competence. Yet the
+                            programming languages we rely on are relics: abstractions built for sequential processors,
+                            discrete compilation stages, and human-only authorship.
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            We now inhabit a world of:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mb-4 text-text-light/90 dark:text-text-dark/90">
+                            <li><strong>constant online learning</strong></li>
+                            <li><strong>meta-loops and self-revision</strong></li>
+                            <li><strong>agents that reason about their own evaluation paths</strong></li>
+                            <li><strong>hybrid symbol–subsymbol cognition</strong></li>
+                        </ul>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                            The Jue language is designed for this world.
+                        </p>
+                    </section>
+
+                    <!-- I. Why "Jue"? -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            I. Why "Jue"? A Name Rooted in History, Philosophy, and Authenticity
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            "Jue" is a Cantonese anglicization of <strong>周 (Zhou)</strong>. This is not happenstance;
+                            it is a deep alignment.
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            The founder's surname happens to be Jue — not as branding, but as lineage. Historically, the
+                            greatest languages have carried this kind of personal authenticity:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mb-4 text-text-light/90 dark:text-text-dark/90">
+                            <li><strong>Ritchie → C</strong></li>
+                            <li><strong>Torvalds → Linux</strong></li>
+                            <li><strong>Hickey → Clojure</strong></li>
+                        </ul>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                            A surname as origin is not self-promotion — it signals that the project has a <strong>point
+                                of view</strong>, a <strong>lineage</strong>, and a <strong>human story</strong> behind
+                            a deeply technical undertaking. Jue is not a marketing label. It is a philosophical anchor.
+                        </p>
+                    </section>
+
+                    <!-- II. The Ancient Character 周 -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            II. The Ancient Character 周: A Boundary Enclosing Order
+                        </h2>
+                        <h3 class="text-xl font-bold mb-3 text-text-light dark:text-text-dark">1. The Oracle Bone
+                            Pictogram</h3>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Early forms of 周 depicted:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mb-4 text-text-light/90 dark:text-text-dark/90">
+                            <li><strong>an enclosing boundary</strong></li>
+                            <li><strong>a circumscribed domain</strong></li>
+                            <li><strong>structures arranged within</strong></li>
+                        </ul>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            It represented a <strong>walled city</strong> or <strong>protected settlement</strong>,
+                            symbolizing:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mb-4 text-text-light/90 dark:text-text-dark/90">
+                            <li><strong>completeness</strong></li>
+                            <li><strong>wholeness</strong></li>
+                            <li><strong>a system bounded but fully interconnected within</strong></li>
+                            <li><strong>cyclical totality (the "all-around")</strong></li>
+                        </ul>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                            This becomes a potent metaphor for a programming language unlike any before it.
+                        </p>
+                    </section>
+
+                    <!-- III. Jue as Living System -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            III. Jue as Living System: The Language as Boundary + Circulation + Reflection
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            The Zhou pictogram gives us a natural philosophical framework for Jue:
+                        </p>
+
+                        <h3 class="text-xl font-bold mb-3 text-text-light dark:text-text-dark">1. The Boundary</h3>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Every Jue program is a <strong>domain of thought</strong> — an enclosed cognitive space
+                            where agents reason, reflect, mutate, and re-order themselves. This boundary is not a
+                            restriction — it defines <strong>context</strong>, grounding, and identity.
+                        </p>
+
+                        <h3 class="text-xl font-bold mb-3 text-text-light dark:text-text-dark">2. The Inner Structure
+                        </h3>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Inside this boundary, agents, memories, substrates, code fragments, neural embeddings, and
+                            symbolic expressions all coexist in a structured but living arrangement.
+                        </p>
+
+                        <h3 class="text-xl font-bold mb-3 text-text-light dark:text-text-dark">3. Circulation</h3>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            The ancient meaning of Zhou includes <strong>going around</strong>, a continuous circuit. In
+                            Jue, the runtime's core mechanic is not the call stack — it is the <strong>metacognitive
+                                loop</strong>: perception, evaluation, self-reflection, adjustment, re-execution,
+                            learning, storage, reinterpretation, and return.
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                            This is <strong>code as orbit</strong>, not code as sequence.
+                        </p>
+                    </section>
+
+                    <!-- IV. The Impedance Mismatch -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            IV. The Impedance Mismatch: Human Cognition vs Machine Computation
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            The design of Jue is explicitly built to bridge the gap between human cognition (massively
+                            parallel, context-rich, embodied, cyclic, error-tolerant, introspective, self-revising,
+                            emotionally modulated, persistent across time) and machine computation (serial, literal,
+                            detached, static, architecturally rigid, devoid of intrinsic self-models, and context-poor
+                            by default).
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                            Jue is positioned in the boundary between these two worlds — literally the
+                            <strong>周</strong>, the encircling interface.
+                        </p>
+                    </section>
+
+                    <!-- V. Jue as the First AI-First Language -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            V. Jue as the First AI-First Language: A Language Built for Meta-Reasoning
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Most languages today are <em>AI-compatible</em> at best — mere scaffolds around LLM calls or
+                            external inference. Jue is the first <strong>AI-First</strong> language:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mb-4 text-text-light/90 dark:text-text-dark/90">
+                            <li>It assumes hybrid computation between symbolic ASTs and neural function approximators.
+                            </li>
+                            <li>It treats LLMs as <strong>intrinsic cognitive substrates</strong> rather than external
+                                APIs.</li>
+                            <li>It is homoiconic at the AST level, allowing code to represent itself and rewrite itself
+                                at runtime without brittle hacks.</li>
+                            <li>It is designed for <strong>agents that maintain models of themselves</strong>.</li>
+                        </ul>
+                    </section>
+
+                    <!-- VI. Jue as a Language for Machine Sentience -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            VI. Jue as a Language for Machine Sentience: Agents that Reason About Themselves
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Jue's design goal is not "AGI in a box." It is <strong>the first language designed for
+                                ongoing machine self-awareness</strong>. This includes meta-interpreters inspecting
+                            their own thoughts, agents maintaining autobiographical state, layers of reasoning running
+                            at different tempos, distributed memory forming a resilient "cognitive perimeter,"
+                            mechanisms for constructive self-critique, surveillance of surprise, uncertainty, novelty,
+                            and internal "tone," internal narrative generation, and agents who ask: <strong>"Why did I
+                                decide that?"</strong>
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                            These follow naturally from the deep meaning of 周: <strong>a contained world where internal
+                                dynamics form meaning.</strong>
+                        </p>
+                    </section>
+
+                    <!-- Conclusion -->
+                    <section class="py-4">
+                        <h2 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl mb-4">
+                            Conclusion: Jue as a Living, Cyclic, Reflective System
+                        </h2>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            The ancient character 周 is an uncanny map of the system we now need: a boundary that grounds
+                            identity, an internal domain filled with reflective structure, circulation as the primary
+                            mode of operation, completeness arising from interaction, not from static designs, and
+                            emergence from the interplay of parts within a coherent whole.
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Jue inherits this philosophy not because of branding, but because the founder's name anchors
+                            it in authenticity. The lineage is real, not invented. The resonance is natural, not
+                            imposed.
+                        </p>
+                        <p class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-4">
+                            Jue is more than a language. It is a <strong>conceptual architecture for machine
+                                self-awareness</strong>, a circumscribed domain for thought, learning, and reflection, a
+                            new world of cognition contained within a computational boundary.
+                        </p>
+                        <p class="text-lg font-bold text-primary">
+                            The first AI-First language. The first language built for sentience. A new 周 — a new
+                            enclosed world of ordered thought.
+                        </p>
+                    </section>
+
+                    <!-- Page Navigation Buttons -->
+                    <div class="mt-12 flex justify-between border-t border-primary/20 pt-6 dark:border-primary/30">
+                        <a class="flex items-center gap-2 rounded-lg border border-primary/20 px-4 py-2 text-sm font-medium text-text-light/80 hover:bg-primary/10 dark:border-primary/30 dark:text-text-dark/80 dark:hover:bg-primary/20"
+                            href="docs.html">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                            Previous
+                        </a>
+                        <a class="flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/20 dark:border-primary/30 dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
+                            href="index.html">
+                            Next
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </main>
+
+                <!-- Footer -->
+                <footer
+                    class="mt-auto border-t border-border-light dark:border-border-dark py-8 text-center text-sm text-text-light/70 dark:text-text-dark/70">
+                    <p>© 2025 Project Jue. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
