@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Introduction: Jue — Language for Machine Sentience</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="config.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+
+        .table-ink-border {
+            border-color: #942a2a;
+            box-shadow: 0 0 5px rgba(148, 42, 42, 0.2)
+        }
+
+        .ink-splatter {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-image: url(img/project-jue-large.png);
+            background-repeat: no-repeat;
+            background-size: contain
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <div class="flex h-full grow flex-col">
+            <div class="mx-auto w-full max-w-5xl px-4 py-5 sm:px-6 lg:px-8">
+                <header
+                    class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-border-light bg-background-light/95 backdrop-blur supports-[backdrop-filter]:bg-background-light/60 dark:border-border-dark dark:bg-background-dark/95 dark:supports-[backdrop-filter]:bg-background-dark/60 px-4 py-3">
+                    <a class="flex items-center gap-3" href="index.html">
+                        <div class="w-8 h-8">
+                            <img alt="Project Jue Logo" class="w-full h-full object-contain"
+                                src="img/project-jue-large.png" />
+                        </div>
+                        <h1 class="text-xl font-bold tracking-tight text-text-light dark:text-text-dark font-display">
+                            Project-Jue</h1>
+                    </a>
+                    <nav class="hidden items-center gap-8 md:flex">
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="index.html">Home</a>
+                        <a class="text-sm font-medium transition-colors text-primary dark:text-primary/90"
+                            href="vision.html">Vision &amp; Technology</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="docs.html">Docs / Guides</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="research.html">Research</a>
+                        <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                            href="contact.html">Contact</a>
+                    </nav>
+                    <a class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark transition-colors hover:bg-border-light dark:hover:bg-border-dark"
+                        href="#">
+                        <span aria-hidden="true" class="material-symbols-outlined !text-xl">code</span>
+                    </a>
+                    <button class="md:hidden p-2 text-text-light dark:text-text-dark">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </header>
+                <main class="flex flex-col py-16 sm:py-24">
+                    <div class="relative mx-auto w-full max-w-4xl px-4 sm:px-6">
+                        <div class="ink-splatter -top-20 -left-20 transform -rotate-12"></div>
+                        <header class="mb-16 text-center">
+                            <h2
+                                class="text-4xl font-bold uppercase leading-tight tracking-wider text-primary md:text-5xl">
+                                Introduction</h2>
+                            <p class="mt-4 max-w-2xl mx-auto text-lg text-text-light/80 dark:text-text-dark/80">Jue —
+                                The Language for Machine Sentience</p>
+                        </header>
+                        <div class="space-y-16">
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">1.
+                                    What are you trying to do?</h3>
+                                <div
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <p class="mb-4">Develop <strong>Jue</strong>, an experimental <strong>AI-first,
+                                            homoiconic programming language and runtime</strong> designed for
+                                        <strong>self-modifying, introspective, and distributed agent-driven
+                                            software</strong>.
+                                    </p>
+                                    <ul class="list-disc list-inside space-y-2">
+                                        <li>Enable AI agents and humans to <strong>co-develop systems that evolve safely
+                                                and audibly</strong> over time.</li>
+                                        <li>Provide a <strong>persistent cognitive substrate</strong> with
+                                            <strong>runtime
+                                                introspection</strong> and <strong>distributed identity-aware object
+                                                graphs</strong>.
+                                        </li>
+                                        <li>Focus on <strong>research-grade experimentation</strong>, not
+                                            general-purpose
+                                            programming.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">2.
+                                    How is it done today, and what are the limits?</h3>
+                                <p
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90 mb-6">
+                                    Current solutions:</p>
+                                <div class="mt-6 overflow-x-auto mb-6">
+                                    <table
+                                        class="w-full min-w-[600px] border border-separate rounded-lg table-ink-border border-spacing-0 bg-card-light dark:bg-card-dark">
+                                        <thead class="bg-primary/10">
+                                            <tr>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Approach</th>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Limitation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Python / Lisp / Julia</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Reflection or dynamic features exist, but <strong>no unified
+                                                        substrate</strong> for evolving, persistent, distributed graphs.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    C/C++ / Rust</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Efficient, safe, but <strong>static by design</strong>, lacks
+                                                    runtime self-modification.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-4 align-top">Distributed frameworks</td>
+                                                <td class="p-4 align-top">Only partially address state synchronization;
+                                                    meta-programming <strong>unsupported</strong>.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p
+                                    class="text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <strong>Limitation:</strong> No single platform allows <strong>AI-human
+                                        collaborative experimentation on evolving, persistent, introspective
+                                        software</strong> at scale with auditability.
+                                </p>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">3.
+                                    What is new in your approach and why do you think it will be successful?</h3>
+                                <div
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <p class="font-bold mb-2">Key Innovations:</p>
+                                    <ul class="list-disc list-inside space-y-2 mb-6">
+                                        <li><strong>Homoiconic runtime:</strong> ASTs, types, methods are first-class,
+                                            mutable objects.</li>
+                                        <li><strong>Meta-object protocol:</strong> Classes, methods, modules
+                                            introspectable and modifiable at runtime.</li>
+                                        <li><strong>Self-modifying and agentic capabilities:</strong> Code can reason
+                                            about itself, generate, and load new code.</li>
+                                        <li><strong>Integrated GC + JIT + persistence:</strong> Managed memory, hot code
+                                            generation, distributed snapshots.</li>
+                                        <li><strong>Distributed identity graphs:</strong> Long-lived, versioned,
+                                            auditable object identity across nodes.</li>
+                                        <li><strong>Experimental focus:</strong> Provides <strong>structured
+                                                exploration</strong> of machine sentience rather than unrestricted
+                                            general-purpose use.</li>
+                                    </ul>
+                                    <p class="font-bold mb-2">Why it will succeed:</p>
+                                    <ul class="list-disc list-inside space-y-2">
+                                        <li>Unified architecture removes brittle “add-on” hacks.</li>
+                                        <li>Sandbox, logging, and snapshotting provide <strong>partial
+                                                guardrails</strong> for safe experimentation.</li>
+                                        <li>Rust + Cranelift foundation ensures <strong>manageable runtime complexity
+                                                and cross-platform deployability</strong>.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">4.
+                                    Who cares?</h3>
+                                <div
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <p class="font-bold mb-2">Stakeholders:</p>
+                                    <ul class="list-disc list-inside space-y-2 mb-6">
+                                        <li>DARPA programs: autonomous agents, adaptive systems, cognitive computing.
+                                        </li>
+                                        <li>AI research labs: long-lived learning systems, introspection, distributed
+                                            cognition experiments.</li>
+                                        <li>Cognitive scientists &amp; human-AI co-development teams.</li>
+                                        <li>Security research labs: study of <strong>safe self-modifying and
+                                                introspective software</strong>.</li>
+                                    </ul>
+                                    <p class="font-bold mb-2">Impact:</p>
+                                    <ul class="list-disc list-inside space-y-2">
+                                        <li>Enables experimentation with <strong>machine self-awareness, runtime
+                                                evolution, and agentic reasoning</strong>.</li>
+                                        <li>Provides a research platform to explore <strong>new forms of AI safety and
+                                                control</strong>.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">5.
+                                    What are the risks and mitigations?</h3>
+                                <div
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <p class="font-bold mb-2">Risks:</p>
+                                    <ul class="list-disc list-inside space-y-2 mb-6">
+                                        <li>Self-modifying software is <strong>inherently unpredictable</strong>.</li>
+                                        <li>Distributed object graph evolution could lead to <strong>state divergence or
+                                                corruption</strong>.</li>
+                                        <li>AI-assisted codegen may introduce <strong>runtime errors or unsafe
+                                                behavior</strong>.</li>
+                                    </ul>
+                                    <p class="font-bold mb-2">Mitigations:</p>
+                                    <ul class="list-disc list-inside space-y-2 mb-6">
+                                        <li><strong>Sandboxing</strong>: isolate modules and agents.</li>
+                                        <li><strong>Snapshots &amp; rollbacks</strong>: recover previous stable states.
+                                        </li>
+                                        <li><strong>Audit logging</strong>: record all modifications for inspection.
+                                        </li>
+                                        <li><strong>Partial guardrails</strong>: constrain mutation patterns without
+                                            stifling experimentation.</li>
+                                    </ul>
+                                    <p class="font-bold mb-2">Philosophy:</p>
+                                    <ul class="list-disc list-inside space-y-2">
+                                        <li>Jue acknowledges <strong>controlled risk</strong> is acceptable — just as
+                                            society adapts to C, networking, or cryptography dangers.</li>
+                                        <li>It is <strong>a research instrument</strong>, not a production language.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">6.
+                                    How much will it cost?</h3>
+                                <div
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <ul class="list-disc list-inside space-y-2 mb-6">
+                                        <li><strong>Phase 0–1 (Year 1):</strong> Core AST, parser, basic interpreter,
+                                            Cranelift integration, REPL. ~$750k–$1M</li>
+                                        <li><strong>Phase 2 (Year 2):</strong> Homoiconicity primitives, runtime
+                                            mutation, meta-object protocol, initial sandboxing. ~$1M–$1.5M</li>
+                                        <li><strong>Phase 3 (Year 3):</strong> Distributed identity graphs, snapshots,
+                                            plugin system, AI-agent scaffolding. ~$1.5M–$2M</li>
+                                    </ul>
+                                    <p
+                                        class="italic font-medium border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r">
+                                        Total 3-year DARPA project estimate: ~$3.25M–$4.5M</p>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">7.
+                                    Milestones / Roadmap</h3>
+                                <div class="mt-6 overflow-x-auto">
+                                    <table
+                                        class="w-full min-w-[600px] border border-separate rounded-lg table-ink-border border-spacing-0 bg-card-light dark:bg-card-dark">
+                                        <thead class="bg-primary/10">
+                                            <tr>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Phase</th>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Milestone</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    0</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Parser + AST + semantic analysis + basic interpreter → minimal
+                                                    cognitive substrate</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    1</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Cranelift backend (JIT/AOT), runtime skeleton, GC, REPL</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    2</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Homoiconicity primitives, runtime AST mutation, meta-object API</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    3</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Distributed identity graphs, snapshots, plugin system, sandboxing
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-4 align-top">4</td>
+                                                <td class="p-4 align-top">Agentic execution, AI-assisted evolution,
+                                                    research tooling</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">8.
+                                    Key Technical Differentiators</h3>
+                                <div class="mt-6 overflow-x-auto">
+                                    <table
+                                        class="w-full min-w-[600px] border border-separate rounded-lg table-ink-border border-spacing-0 bg-card-light dark:bg-card-dark">
+                                        <thead class="bg-primary/10">
+                                            <tr>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Feature</th>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Status Quo</th>
+                                                <th
+                                                    class="p-4 text-left font-bold text-primary border-b border-primary/20">
+                                                    Jue</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Code ↔ Data Symmetry</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Limited macros / reflection</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Native homoiconicity, AST/type/method as runtime objects</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Self-Modifying Code</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Unsafe / discouraged</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Explicit, auditable, sandboxed</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Distributed Object Graphs</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    External tooling</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Native, versioned, persistent, identity-aware</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    AI / Agent Workflow</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Not core</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Runtime introspection, codegen, dynamic evolution</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Safety</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Don’t self-modify</td>
+                                                <td
+                                                    class="p-4 align-top border-b border-border-light dark:border-border-dark">
+                                                    Guardrails + snapshots + logging</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-4 align-top">Target Domain</td>
+                                                <td class="p-4 align-top">General-purpose</td>
+                                                <td class="p-4 align-top">Experimental cognition &amp; machine sentience
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <section>
+                                <h3 class="text-2xl font-bold leading-tight tracking-tight text-primary md:text-3xl">9.
+                                    Why This Matters (Vision)</h3>
+                                <div
+                                    class="mt-4 text-base font-normal leading-relaxed text-text-light/90 dark:text-text-dark/90">
+                                    <ul class="list-disc list-inside space-y-2">
+                                        <li>Enables <strong>machine self-reflection and self-directed
+                                                evolution</strong>.
+                                        </li>
+                                        <li>Provides <strong>a research-grade substrate</strong> for agentic software
+                                            experiments.</li>
+                                        <li>Offers <strong>structured observation and partial control</strong> over
+                                            evolving AI systems.</li>
+                                        <li>Facilitates <strong>experimentation, auditability, and safety
+                                                research</strong> for DARPA-relevant autonomous technologies.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="mt-16 flex justify-between border-t border-primary/20 pt-6 dark:border-primary/30">
+                            <a class="flex items-center gap-2 rounded-lg border border-primary/20 px-4 py-2 text-sm font-medium text-text-light/80 hover:bg-primary/10 dark:border-primary/30 dark:text-text-dark/80 dark:hover:bg-primary/20"
+                                href="index.html">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                                Previous
+                            </a>
+                            <a class="flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/20 dark:border-primary/30 dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
+                                href="docs.html">
+                                Next
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <footer
+                    class="mt-auto border-t border-border-light dark:border-border-dark py-8 text-center text-sm text-text-light/70 dark:text-text-dark/70">
+                    <p>© 2025 Project Jue. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

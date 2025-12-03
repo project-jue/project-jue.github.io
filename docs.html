@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Jue: Docs / Guides</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script src="config.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-border-light bg-background-light/95 backdrop-blur supports-[backdrop-filter]:bg-background-light/60 dark:border-border-dark dark:bg-background-dark/95 dark:supports-[backdrop-filter]:bg-background-dark/60 px-4 py-3">
+            <a class="flex items-center gap-3" href="index.html">
+                <div class="w-8 h-8">
+                    <img alt="Project Jue Logo" class="w-full h-full object-contain" src="img/project-jue-large.png" />
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-text-light dark:text-text-dark font-display">
+                    Project-Jue</h1>
+            </a>
+            <nav class="hidden items-center gap-8 md:flex">
+                <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                    href="index.html">Home</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                    href="vision.html">Vision &amp; Technology</a>
+                <a class="text-sm font-medium transition-colors text-primary dark:text-primary/90" href="docs.html">Docs
+                    / Guides</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                    href="research.html">Research</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary/90"
+                    href="contact.html">Contact</a>
+            </nav>
+            <a class="flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark transition-colors hover:bg-border-light dark:hover:bg-border-dark"
+                href="#">
+                <span aria-hidden="true" class="material-symbols-outlined !text-xl">code</span>
+            </a>
+            <button class="md:hidden p-2 text-text-light dark:text-text-dark">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center px-4 py-5 sm:px-10 md:px-20 lg:px-40">
+                <div class="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
+                    <main class="flex flex-col gap-8 p-4 pt-12">
+                        <div class="flex flex-wrap gap-2 pb-4">
+                            <a class="text-text-light/60 hover:text-primary text-sm font-medium leading-normal dark:text-text-dark/60 dark:hover:text-primary"
+                                href="#">Jue</a>
+                            <span
+                                class="text-text-light/50 text-sm font-medium leading-normal dark:text-text-dark/50">/</span>
+                            <a class="text-text-light/60 hover:text-primary text-sm font-medium leading-normal dark:text-text-dark/60 dark:hover:text-primary"
+                                href="#">Guides</a>
+                            <span
+                                class="text-text-light/50 text-sm font-medium leading-normal dark:text-text-dark/50">/</span>
+                            <span
+                                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Installation</span>
+                        </div>
+                        <div
+                            class="flex flex-wrap justify-between gap-3 border-b border-primary/20 pb-4 dark:border-primary/30">
+                            <h1
+                                class="text-text-light dark:text-text-dark text-4xl font-black leading-tight tracking-tight min-w-72 font-display">
+                                Installation Guide</h1>
+                        </div>
+                        <div
+                            class="prose prose-stone dark:prose-invert max-w-none pt-8 font-display text-text-light/90 dark:text-text-dark/90">
+                            <p class="text-lg leading-relaxed">This guide will walk you through the necessary steps to
+                                install and set up the Project Jue environment on your local machine. Follow these
+                                instructions carefully to ensure a smooth setup process. We will cover prerequisites,
+                                cloning the repository, and setting up the required dependencies.</p>
+                            <h2 class="text-text-light dark:text-text-dark font-bold">Prerequisites</h2>
+                            <p>Before you begin, ensure you have the following installed on your system:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Rust 1.91.1 or higher</li>
+                                <li>Git version control system</li>
+                            </ul>
+                            <h2 class="text-text-light dark:text-text-dark font-bold">Installation Steps</h2>
+                            <p>First, clone the project repository from GitHub to your local machine. Open your terminal
+                                and
+                                run the following command:</p>
+                            <div class="relative my-6 rounded-lg bg-text-light/90 dark:bg-black/50">
+                                <button
+                                    class="absolute top-2 right-2 flex items-center gap-1 rounded-md bg-white/10 px-2 py-1 text-xs text-white/70 hover:bg-white/20">
+                                    <span class="material-symbols-outlined text-sm">content_copy</span>
+                                    Copy
+                                </button>
+                                <pre class="font-mono text-sm p-4 text-white/90 overflow-x-auto"><code class="language-bash">git clone https://github.com/project-jue/jue.git
+cd jue
+                    </code></pre>
+                            </div>
+                            <p>Next, build the project using Cargo. This will compile the source code and download
+                                necessary
+                                dependencies.</p>
+                            <pre
+                                class="font-mono text-sm p-4 text-white/90 overflow-x-auto rounded-lg bg-text-light/90 dark:bg-black/50"><code class="language-bash">cargo build --release</code></pre>
+                            <p>Finally, you can run the project:</p>
+                            <pre
+                                class="font-mono text-sm p-4 text-white/90 overflow-x-auto rounded-lg bg-text-light/90 dark:bg-black/50"><code class="language-bash">cargo run --release</code></pre>
+                            <p>Congratulations! You have successfully installed Project Jue. We'll have a quickstart
+                                guide evenutally, but we're still building the core components.
+                                For now, you can explore the codebase and experiment with the core components, as well
+                                as the documentation.</p>
+                        </div>
+                        <div class="mt-12 flex justify-between border-t border-primary/20 pt-6 dark:border-primary/30">
+                            <a class="flex items-center gap-2 rounded-lg border border-primary/20 px-4 py-2 text-sm font-medium text-text-light/80 hover:bg-primary/10 dark:border-primary/30 dark:text-text-dark/80 dark:hover:bg-primary/20"
+                                href="vision.html">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                                Previous
+                            </a>
+                            <a class="flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/20 dark:border-primary/30 dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
+                                href="research.html">
+                                Next
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </main>
+                    <footer class="mt-20 border-t border-solid border-border-light py-10 dark:border-border-dark">
+                        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                            <p class="text-sm text-text-muted-light dark:text-text-muted-dark">© 2025 Project Jue. All
+                                rights reserved.</p>
+                            <div class="flex items-center gap-6">
+                                <a class="text-sm font-medium" href="contact.html">Contact</a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
